@@ -1,0 +1,15 @@
+@model ImageBlock
+
+@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@using kurs.Models.Blocks
+
+<b>My image block:</b>
+
+<div>
+
+    @if (Model.Image != null)
+    {
+        <img src="@Url.ContentUrl(Model.Image)" />
+    }
+</div>

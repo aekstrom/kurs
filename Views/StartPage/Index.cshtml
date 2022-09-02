@@ -1,0 +1,28 @@
+@model StartPage
+
+@using EPiServer.Web.Mvc.Html
+@using kurs.Models.Pages
+
+<div>
+    <h2>@Html.PropertyFor(m => m.Title)</h2>
+</div>
+
+<div>
+    <@Html.PropertyFor(m => m.Body)
+</div>
+
+@*<div>
+
+    @foreach(var child in Model.Children)
+    {
+        <a href="@Url.ContentUrl(child.ContentLink)">
+            @child.Name
+        </a>
+    }
+</div>*@
+
+@*<div>
+    <a href="@Url.ContentUrl(Model.PageReference)">
+        @Model.Name
+    </a>
+</div>*@

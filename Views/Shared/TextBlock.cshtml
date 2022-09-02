@@ -1,0 +1,11 @@
+@model TextBlock
+
+@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@using kurs.Models.Blocks
+
+<b>My text block:</b>
+
+<div>
+    @Html.PropertyFor(m => m.Text)
+</div>

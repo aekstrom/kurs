@@ -1,0 +1,22 @@
+@model StandardPage
+
+@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+@using kurs.Models.Pages
+
+@{
+}
+
+<b>My Standard page:</b>
+
+<div>
+    @Html.PropertyFor(m => m.Title)
+</div>
+
+
+<div>
+    @Html.PropertyFor(m => m.Area)
+</div>
+
+
+
