@@ -29,11 +29,10 @@ public class StartPage : PageData
     [UIHint(UIHint.Textarea)]
     public virtual string? Body { get; set; }
 
-    //[CultureSpecific]
-    //[Display(
-    //   Name = "Sida",
-    //   Description = "My property description",
-    //   GroupName = SystemTabNames.Content,
-    //   Order = 30)]
-    //public virtual ContentReference? PageReference { get; set; }
+    [Display(
+       Name = "PageLink",
+       Description = "My property description",
+       GroupName = SystemTabNames.Content,
+       Order = 30)]
+    public virtual ContentReference? PageReference { get; set; }
 }

@@ -8,11 +8,9 @@ namespace kurs.Models.Blocks;
     Description = "")]
 public class TextBlock : BlockData
 {
-
+    [CultureSpecific]
     [Display(
         Name = "Text",
         Description = "Text for this block")]
-    [StringLength(10)]
-    [Required]
-    public virtual string Text { get; set; }
+    public virtual XhtmlString? HtmlText { get; set; }
 }

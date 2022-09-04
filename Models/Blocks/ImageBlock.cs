@@ -13,5 +13,5 @@ public class ImageBlock : BlockData
         Name = "Image",
         Description = "Image block")]
     [UIHint(UIHint.Image)]
-    public virtual ContentReference Image { get; set; }
+    public virtual ContentReference? Image { get; set; }
 }
