@@ -37,3 +37,24 @@ Create an empty database on the external database server and update the connecti
 ```bash
 $ dotnet run
 ````
+
+###More
+Environment setup tasks (these only need running once)
+
+Run powershell (pswh in terminal or from finder, mission control, etc)
+Run dotnet new -i EPiServer.Net.Templates --nuget-source https://nuget.optimizely.com/feed/packages.svc/ --force
+Run dotnet tool install EPiServer.Net.Cli --global --add-source https://nuget.optimizely.com/feed/packages.svc/
+Run dotnet nuget add source http://nuget.episerver.com/feed/packages.svc -n Optimizely
+Run dotnet dev-certs https --trust
+
+Setup a DB server on Docker
+Grab the docker compose file sql-compose.yml.
+In Terminal run docker compose up from where you saved the docker compose file.
+
+Create a new empty project. In Powershell run the following
+dotnet new epi-cms-empty --name kurs
+cd kurs
+dotnet-episerver create-cms-database kurs.csproj -S localhost -U sa -P 0pti_R0cks
+dotnet-episerver add-admin-user kurs.csproj -u admin -p P4ssw0rd! -e user@email.com -c EPiServerDB
+dotnet build
+dotnet run
