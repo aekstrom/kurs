@@ -33,8 +33,6 @@ public class Startup
             .AddCmsAspNetIdentity<ApplicationUser>()
             .AddCms()
             .AddEmbeddedLocalization<Startup>();
-
-        // services.AddMvc();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -52,8 +50,6 @@ public class Startup
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapContent();
-            //endpoints.MapControllers();
-            //endpoints.MapRazorPages();
         });
     }
 }
